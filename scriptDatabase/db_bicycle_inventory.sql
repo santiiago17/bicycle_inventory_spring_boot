@@ -1,0 +1,23 @@
+CREATE SCHEMA IF NOT EXISTS db_bicycle_inventory;
+USE db_bicycle_inventory;
+
+CREATE TABLE IF NOT EXISTS bicycles (
+  id BIGINT(20) NOT NULL AUTO_INCREMENT,
+  brand VARCHAR(255) NULL,
+  model VARCHAR(255) NULL,
+  bike_type VARCHAR(255) NULL,
+  price DOUBLE NULL,
+  stock INT(11) NOT NULL,
+  created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  primary_color VARCHAR(255) NULL,
+  secondary_color VARCHAR(255) NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS users (
+  id BIGINT(20) NOT NULL AUTO_INCREMENT,
+  email VARCHAR(255) NULL,
+  pasword VARCHAR(255) NULL,
+  PRIMARY KEY (id)
+);
+
